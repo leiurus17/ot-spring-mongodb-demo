@@ -5,6 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.demo.hello.Address;
 import com.example.demo.hello.Customer;
 import com.example.demo.hello.CustomerRepository;
 
@@ -26,6 +27,8 @@ public class OtSpringMongodbDemoApplication implements CommandLineRunner {
 		// save a couple of customers
 		repository.save(new Customer("Alice", "Smith"));
 		repository.save(new Customer("Bob", "Smith"));
+		
+		repository.save((new Customer("Marlon", "Monzon", new Address("123", "Ayala Ave."))));
 		
 		// fetch all customers
 		System.out.println("Customers found with findAll():");

@@ -9,6 +9,7 @@ public class Customer {
 	
 	public String firstName;
 	public String lastName;
+	public Address address;
 	
 	public Customer() {
 		
@@ -17,6 +18,12 @@ public class Customer {
 	public Customer(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
+	}
+	
+	public Customer(String firstName, String lastName, Address address) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
 	}
 	
 	@Override
