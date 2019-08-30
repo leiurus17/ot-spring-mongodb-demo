@@ -28,7 +28,7 @@ public class OtSpringMongodbDemoApplication implements CommandLineRunner {
 		repository.save(new Customer("Alice", "Smith"));
 		repository.save(new Customer("Bob", "Smith"));
 		
-		repository.save((new Customer("Marlon", "Monzon", new Address("123", "Ayala Ave."))));
+		repository.save(new Customer("Marlon", "Monzon", new Address("123", "Ayala Ave.")));
 		
 		// fetch all customers
 		System.out.println("Customers found with findAll():");
